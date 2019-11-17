@@ -16,14 +16,14 @@ def run_game():
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
-    pygame.display.set_caption("Inwazja obcych")
+    pygame.display.set_caption("Alien Invasion")
     ship = Ship(ai_settings,screen)
     bullets = Group()
     alien = Alien(ai_settings, screen)
     aliens = Group()
     gf.create_fleet(ai_settings, screen, ship, aliens)
     stats =  GameStats(ai_settings)
-    play_button = Button(ai_settings, screen, "Gra")
+    play_button = Button(ai_settings, screen, "Play")
     sb = Scoreboard(ai_settings, screen, stats)
     
     while True:
